@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Easy Docker Monitoring (EaDoMo) tool homepage.">
+    <meta property="og:title" content="Easy Docker Monitoring (EaDoMo)">
+    <meta property="og:description" content="EaDoMo is a lightweight monitoring tool for Docker containers, services, servers, and Java applications.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.eadomo.com/">
+    <meta property="og:image" content="https://www.eadomo.com/images/dashboard@2x.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Easy Docker Monitoring (EaDoMo)">
+    <meta name="twitter:description" content="EaDoMo is a lightweight monitoring tool for Docker containers, services, servers, and Java applications.">
+    <meta name="twitter:image" content="https://www.eadomo.com/images/dashboard@2x.jpg">
+
+    <title>Easy Docker Monitoring</title>
+
+    <link rel="canonical" href="https://www.eadomo.com/">
+
+    <link rel="stylesheet" href="./styles/glide.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+
+  </head>
+  <body>
+
+<header class="z-10 relative">
+  <div class="container flex items-center justify-between pt-16 lg:justify-center lg:pt-6">
+    <a href="./">
+      <img
+        class="max-w-[150px] lg:w-20"
+        src="./images/logo.svg"
+        alt="EaDoMo logo" />
+    </a>
+    <nav class="lg:hidden">
+      <ul class="flex items-center">
+        <li class="mr-14 last:mr-0">
+          <a href="#about" class="font-bold text-base uppercase text-black">About</a>
+        </li>
+        <li class="mr-14 last:mr-0">
+          <a href="#features" class="font-bold text-base uppercase text-black">Features</a>
+        </li>
+        <li class="mr-14 last:mr-0">
+          <a href="#running" class="font-bold text-base uppercase text-black">Running</a>
+        </li>
+        <li class="mr-14 last:mr-0">
+          <a href="#contact-us" class="font-bold text-base uppercase text-black">Contact us</a>
+        </li>
+        <li class="mr-14 last:mr-0">
+          <a class="button" href="https://github.com/eadomo/eadomo">
+            Start now
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="max-w-[1920px] pt-[178px] -mt-[178px] ml-auto mr-auto relative mb-36 before:w-full before:h-56 before:bg-white before:blur-xl before:block before:absolute before:top-full before:z-20 before:-translate-y-36 before:scale-125 lg:mb-28 lg:before:h-32 lg:before:-translate-y-14">
+    <picture>
+      <source srcset="/images/top-bg-small.svg" media="(max-width:1219px)">
+      <img
+        class=" absolute top-0 bottom-0 w-full h-full object-cover"
+        src="./images/top-bg.svg"
+        alt="">
+    </picture>
+    <div class="container z-20 relative pt-[150px] lg:pt-24 lg:text-center lg:flex lg:flex-col lg:items-center">
+      <h1 class="font-bold text-[38px] mb-6 max-w-[246px] leading-[49px]">
+        Easy Docker Monitoring
+      </h1>
+      <p class="text-base leading-8 max-w-[523px] mb-14">
+        EaDoMo is a good choice if you don't want to spend days configuring enterprise-level monitoring frameworks like Prometheus, Zabbix or similar. It is designed for small non-production deployments and allows you to have an overview of the docker containers and services running within your ecosystem.
+        <br><br>
+        EaDoMo is easy to install and easy to run. The only thing it requires to operate is a connection to your Docker socket. Apart from docker containers, EaDoMo can also monitor servers (also those which have a zabbix agent installed) and Java applications providing access to JMX.
+        <br><br>
+        EaDoMo uses MongoDB to store data. It can inform you about service outages using Telegram and Slack channels.
+      </p>
+      <div class="flex items-center mb-40 lg:flex-col lg:mb-14">
+        <a href="https://github.com/eadomo/eadomo" class="button w-[217px] mr-11 shadow-shadow3 lg:mr-0 lg:mb-4">Start now</a>
+        <a href="https://hub.docker.com/r/eadomo/eadomo" class="text-sm text-primary uppercase">More on dockerhub</a>
+      </div>
+    </div>
+  </section>
+  <section class="container flex items-start mb-28 md:flex-col md:text-center md:mb-14" id="about">
+    <p class="text-base leading-8 mr-14 md:mr-0 md:mb-6">
+      EaDoMo is designed for small non-production deployments and allows you to
+      have an overview of the docker containers and services running within your ecosystem.
+      <br/>
+      <br/>
+      EaDoMo is easy to install and easy to run. The only thing it requires to
+      operate is a connection to your Docker socket. Apart from docker containers, EaDoMo can also monitor servers (also those which have a zabbix agent installed) and Java applications providing access to JMX.
+      <br/>
+      <br/>
+      EaDoMo uses MongoDB to store data. It can inform you about service outages using Telegram and Slack channels.
+    </p>
+    <div class="shadow-shadow1 max-w-[388px] w-full bg-blue-light px-[18px] py-11 pb-12 flex-shrink-0 rounded-2xl relative md:mx-auto md:py-6">
+      <h3 class="text-base leading-[49px] uppercase font-semibold text-center mb-8 overflow-x-hidden">
+        Docker pull command
+      </h3>
+      <code class="rounded-xl bg-sand pb-[18px] pt-[22px] px-7 w-full block font-courier-new mb-3 text-brown md:px-4" id="code">docker pull eadomo/eadomo</code>
+      <button
+        type="button"
+        class="button w-full h-[60px] relative py-3 md:hidden"
+        id="copy">
+        <svg
+          class=""
+          xmlns="http://www.w3.org/2000/svg"
+          width="17.499"
+          height="19.999">
+          <path
+            fill="#fff"
+            d="M12.5 17.5v1.562a.937.937 0 0 1-.937.937H.937A.937.937 0 0 1 0 19.062V4.687a.937.937 0 0 1 .937-.937H3.75v11.562A2.19 2.19 0 0 0 5.937 17.5Zm0-13.437V0H5.937A.937.937 0 0 0 5 .937v14.375a.937.937 0 0 0 .937.937h10.625a.937.937 0 0 0 .937-.937V5h-4.062a.94.94 0 0 1-.937-.938Zm4.725-1.213L14.649.275A.937.937 0 0 0 13.986 0h-.237v3.75H17.5v-.237a.937.937 0 0 0-.275-.663Z"
+            data-name="solid copy" />
+        </svg>
+        <span class="flex-grow inline-flex items-center justify-center border-l-[1px] h-full ml-5">
+          Copy
+        </span>
+      </button>
+    </div>
+  </section>
+  <section class="mb-24 container">
+    <h2 class="text-[38px] font-semibold text-center mb-4">
+      Built-in monitoring
+    </h2>
+    <img
+      class="ml-auto mr-auto"
+      src="./images/built-in@1x.png"
+      srcset="./images/built-in@1x.png 1x, ./images/built-in@2x.png 2x"
+      alt="Built-in monitoring" />
+  </section>
+  <section class="mb-20 container">
+    <h2 class="text-[38px] font-semibold text-center mb-4">
+      Convenient dashboard
+    </h2>
+    <img
+      class="ml-auto mr-auto"
+      src="./images/dashboard@1x.jpg"
+      srcset="./images/dashboard@1x.jpg 1x, ./images/dashboard@2x.jpg 2x"
+      alt="Convenient dashboard" />
+  </section>
+  <section class="container mb-28 lg:mb-14" id="running">
+    <h2 class="text-[38px] font-semibold text-center mb-4">Running</h2>
+    <p class="text-base leading-8 text-center mb-12">
+      The recommended way to run EaDoMo is using docker - directly or via
+      docker-compose.
+    </p>
+    <div
+      class="flex items-start mb-28 lg:flex-col mt-16 lg:mt-4 lg:mb-12"
+      x-data="{tab: 'tab-1'}"
+      x-breakpoint="if(!$isBreakpoint('unset')) tab = 'all'">
+      <div class="flex flex-col bg-blue max-w-[316px] rounded-xl mt-16 flex-shrink-0 relative shadow-shadow1 lg:hidden">
+        <button
+          type="button"
+          :class="{ 'active': tab === 'tab-1' }"
+          class="tab"
+          @click="tab = 'tab-1'">
+          <span class="relative block">To monitor local host</span>
+        </button>
+        <button
+          type="button"
+          :class="{ 'active': tab === 'tab-2' }"
+          class="tab"
+          @click="tab = 'tab-2'">
+          <span class="relative block">A sample env file</span>
+        </button>
+        <button
+          type="button"
+          :class="{ 'active': tab === 'tab-3' }"
+          class="tab"
+          @click="tab = 'tab-3'">
+          <span class="relative block">To monitor remote host</span>
+        </button>
+        <button
+          type="button"
+          :class="{ 'active': tab === 'tab-4' }"
+          class="tab"
+          @click="tab = 'tab-4'">
+          <span class="relative block">Or with docker-compose.yml</span>
+        </button>
+      </div>
+      <div class="w-full -ml-8 shadow-shadow2 lg:ml-0">
+        <div x-show="tab === 'tab-1' || tab === 'all'">
+          <h3 class="hidden lg:block my-6 text-xl font-bold">To monitor local host:</h3>
+          <pre>
+  <code>
+    docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
+    -v $PWD/eadomo.yml:/etc/eadomo.yml \
+    --net=host \  # not required, only to simplify host ports monitoring
+    --restart unless-stopped \
+    -p 5555:5555 \
+    --name eadomo \
+    --env-file env.env \
+    eadomo/eadomo:latest python3 eadomo.py /etc/eadomo.yml
+  </code>
+</pre>
+        </div>
+        <div x-show="tab === 'tab-2' || tab === 'all'">
+          <h3 class="hidden lg:block my-6 text-xl font-bold">A sample env file:</h3>
+          <pre>
+  <code>
+    ENV_NAME=my-deployment
+    ADMIN_MODE=1
+    ADMIN_USER=admin
+    ADMIN_PASSWORD=secure_password
+    ACTIONS_ENABLED=1
+    SESSION_SECRET=random-string
+    MONGO_URI=mongodb://localhost
+    DB_NAME=depl_status
+    ALLOWED_CORS_ORIGINS=https://your.host.com
+    TELEGRAM_CHAT_ID=12345  # optional, only if telegram is used
+    TELEGRAM_TOKEN=your-telegram-token # optional, only if telegram is used
+    SLACK_CHAT=my-system-notifications # optional, only if slack is used
+    SLACK_TOKEN=your-slack-app-token # optional, only if slack is used
+  </code>
+</pre>
+        </div>
+        <div x-show="tab === 'tab-3' || tab === 'all'">
+          <h3 class="hidden lg:block my-6 text-xl font-bold">To monitor remote host:</h3>
+          <pre>
+  <code>
+    docker run -d -e DOCKER_HOST=ssh://1.2.3.4:22 \
+    -v $PWD/eadomo.yml:/etc/eadomo.yml \
+    --restart unless-stopped \
+    -p 5555:5555 \
+    --name eadomo \
+    --env-file env.env \
+    eadomo/eadomo:latest python3 eadomo.py /etc/eadomo.yml
+  </code>
+</pre>
+        </div>
+        <div x-show="tab === 'tab-4' || tab === 'all'">
+          <h3 class="hidden lg:block my-6 text-xl font-bold">Or with docker-compose.yml:</h3>
+          <pre>
+  <code>
+    version: '3.5'
+    services:
+      eadomo:
+        image: eadomo/eadomo
+        ports:
+          - "5555:5555"
+        volumes:
+          - ./eadomo.yml:/etc/eadomo.yml
+          - /var/run/docker.sock:/var/run/docker.sock
+        environment:
+          ENV_NAME: my-deployment
+          ADMIN_MODE: 1
+          ADMIN_USER: admin
+          ADMIN_PASSWORD: secure_password
+          ACTIONS_ENABLED: 1
+          SESSION_SECRET: random-string
+          MONGO_URI: mongodb://mongo
+          DB_NAME: depl_status
+          ALLOWED_CORS_ORIGINS: https://your.host.com
+          TELEGRAM_CHAT_ID: 12345  # optional, only if telegram is used
+          TELEGRAM_TOKEN: your-telegram-token # optional, only if telegram is used
+          SLACK_CHAT: my-system-notifications # optional, only if slack is used
+          SLACK_TOKEN: your-slack-app-token # optional, only if slack is used
+
+      mongo:
+        image: mongo:4
+        volumes:
+          - mongo:/data/db
+
+    volumes:
+      mongo:
+  </code>
+</pre>
+        </div>
+      </div>
+    </div>
+    <p class="text-[15px] leading-[32px] text-center max-w-[749px] ml-auto mr-auto mb-14">
+      By default EaDoMo exposes port 5555 as an unencrypted HTTP connection and is available in /dashboard context: http://your-host:5555/dashboard. If you want HTTPS, please run it behind a reverse proxy, for instance, NGINX.
+    </p>
+    <div class="flex flex-col items-end max-w-[341px] ml-auto mr-auto lg:items-center">
+      <a href="https://hub.docker.com/r/eadomo/eadomo" class="button mb-3 shadow-shadow3">Get all instructions</a>
+      <span class="text-xs text-primary uppercase">on dockerhub</span>
+    </div>
+  </section>
+  <section class="max-w-[1920px] ml-auto mr-auto relative pt-20 pb-20 md:py-12" id="features">
+    <img
+      class="object-none object-top absolute top-0 h-full w-full lg:object-cover lg:bottom-0"
+      src="./images/feature-bg.svg"
+      alt="">
+    <div class="container z-20 relative">
+      <h2 class="font-semibold text-[38px] text-center mb-14">Features</h2>
+      <div class="flex mb-20 md:flex-col md:mb-5">
+        <div class="mr-4 flex-grow basis-72">
+          <div class="text-center">
+            <svg
+              class="inline-block mb-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="48.839"
+              height="35.119">
+              <defs>
+                <clipPath id="a"><path
+                    fill="#3d7ab7"
+                    d="M9.803 28.3a2.645 2.645 0 0 1-2.653-2.529 2.564 2.564 0 0 1 2.653-2.527 2.564 2.564 0 0 1 2.657 2.527A2.645 2.645 0 0 1 9.803 28.3Zm32.593-13.77a7.525 7.525 0 0 0-3.158-4.93l-.632-.505-.505.632a6.842 6.842 0 0 0-.126 7.832c-.505.253-1.137.505-1.642.758a10.64 10.64 0 0 1-3.411.505H.202l-.126.758a14.212 14.212 0 0 0 1.137 7.2l.505.884v.126c3.032 5.053 8.464 7.327 14.4 7.327 11.37 0 20.718-4.927 25.139-15.538 2.906.126 5.811-.632 7.2-3.411l.379-.632-.632-.379a7.71 7.71 0 0 0-5.808-.629Zm-16.3-2.021h-4.923v4.927H26.1Zm0-6.19h-4.923v4.927H26.1Zm0-6.316h-4.923v4.924H26.1Zm6.064 12.504h-4.924v4.927h4.924Zm-18.318 0H8.919v4.927h4.927v-4.927Zm6.19 0h-4.923v4.927h4.927Zm-12.254 0H2.86v4.927h4.922v-4.927Zm12.254-6.19h-4.923v4.927h4.927Zm-6.19 0H8.919v4.927h4.927V6.316Z"
+                    data-name="Контур 375" /></clipPath>
+              </defs>
+              <g clip-path="url(#a)" data-name="Сгруппировать 295"><path fill="#3d7ab7" d="M-62.836-28.55h1610.437v191.262H-62.836Z" /></g>
+            </svg>
+            <h4 class="text-xl mb-7 uppercase text-primary font-bold">Docker containers</h4>
+          </div>
+          <p class="text-[15px] leading-7 font-semibold">EaDoMo verifies the following parameters of docker containers:</p>
+          <ul role="list" class="marker:text-black list-disc text-[15px] leading-7 ml-3 pl-4 mb-7">
+            <li>if the container running</li>
+            <li>if the container has been restarted recently (planned/unplanned)</li>
+            <li>if a port exposed is open and listening</li>
+            <li>if a newer image is available</li>
+            <li>(on gitlab) if new commits were pushed into the development branch
+              which are not on deployment branch yet</li>
+          </ul>
+          <p class="text-[15px] leading-7 font-semibold">It also gathers statistics on:</p>
+          <ul role="list" class="marker:text-black list-disc text-[15px] leading-7 ml-3 pl-4 mb-7">
+            <li>uptime</li>
+            <li>memory used</li>
+            <li>CPU used</li>
+            <li>disk usage</li>
+            <li>network traffic</li>
+          </ul>
+        </div>
+        <div class="w-full flex-grow basis-72">
+          <div>
+            <div class="text-center">
+              <svg
+                class="inline-block mb-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32.006"><path
+                  fill="#3d7ab7"
+                  d="M21.714 9.808C20.778 4.046 18.571 0 16 0s-4.775 4.046-5.711 9.808ZM9.808 16a40.446 40.446 0 0 0 .213 4.13h11.958a40.446 40.446 0 0 0 .213-4.13 40.447 40.447 0 0 0-.213-4.13H10.021A40.446 40.446 0 0 0 9.808 16Zm20.953-6.195a16.037 16.037 0 0 0-10.2-9.137 21.779 21.779 0 0 1 3.226 9.137ZM11.435.671a16.026 16.026 0 0 0-10.19 9.137h6.97a21.691 21.691 0 0 1 3.22-9.137Zm20.017 11.2h-7.4c.136 1.355.213 2.742.213 4.13s-.077 2.775-.213 4.13h7.4A15.865 15.865 0 0 0 32 16a16.142 16.142 0 0 0-.548-4.13ZM7.743 16c0-1.387.077-2.775.213-4.13H.555a15.644 15.644 0 0 0 0 8.26h7.4A41.995 41.995 0 0 1 7.743 16Zm2.549 6.2c.936 5.762 3.143 9.808 5.711 9.808s4.775-4.046 5.711-9.808Zm10.279 9.137a16.052 16.052 0 0 0 10.2-9.137H23.8a21.779 21.779 0 0 1-3.228 9.135ZM1.245 22.2a16.037 16.037 0 0 0 10.2 9.137 21.779 21.779 0 0 1-3.23-9.137h-6.97Z"
+                  data-name="solid globe" /></svg>
+              <h4 class="text-xl mb-7 uppercase text-primary font-bold">Web services</h4>
+            </div>
+            <p class="text-[15px] leading-7 font-semibold">EaDoMo verifies:</p>
+            <ul role="list" class="marker:text-black list-disc text-[15px] leading-7 ml-3 pl-4 mb-7">
+              <li>if a port is listening</li>
+              <li>SSL certificate validity</li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-center">
+              <svg
+                class="inline-block mb-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="36.571"
+                height="32"><path
+                  fill="#3d7ab7"
+                  d="M29.714 1.143A1.143 1.143 0 0 0 28.571 0H24a1.143 1.143 0 0 0-1.143 1.143v3.429h6.857Zm-25.149 8C4.386 15.846.247 17.3 0 26.571v3.143A2.286 2.286 0 0 0 2.286 32h6.857a2.286 2.286 0 0 0 2.286-2.286V18.286h2.286V6.857H6.846a2.308 2.308 0 0 0-2.281 2.285Zm27.441 0a2.308 2.308 0 0 0-2.281-2.285h-6.868v11.428h2.286v11.428A2.286 2.286 0 0 0 27.429 32h6.857a2.286 2.286 0 0 0 2.286-2.286v-3.143c-.248-9.271-4.386-10.725-4.566-17.429ZM12.571 0H8a1.143 1.143 0 0 0-1.143 1.143v3.429h6.857V1.143A1.143 1.143 0 0 0 12.571 0ZM16 18.286h4.571V6.857H16Z"
+                  data-name="solid binoculars" /></svg>
+              <h4 class="text-xl mb-7 uppercase text-primary font-bold">JMX services</h4>
+            </div>
+            <p class="text-[15px] leading-7 font-semibold">EaDoMo gathers statistics on:</p>
+            <ul role="list" class="marker:text-black list-disc text-[15px] leading-7 ml-3 pl-4 mb-7">
+              <li>uptime</li>
+              <li>memory used</li>
+              <li>CPU used</li>
+              <li>disk usage</li>
+              <li>network traffic</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <h2 class="font-semibold text-[38px] text-center mb-14 md:mb-6">How it works</h2>
+      <p class="font-[15px] leading-8 text-center max-w-[1085px] ml-auto mr-auto">
+        Docker engine provides itself a lot of monitoring and statistics gathering capabilities, which EaDoMo is making use of. Monitoring of services is done either by simple checking open port availability or, in case Zabbix agent is available, by fetching node information from it. For JMX applications EaDoMo launches a proxy container within the target container namespace which fetches information and provides it to EaDoMo via Docker connection - there is no additional communication channels opened between the monitored host and the host where EaDoMo is running.
+      </p>
+    </div>
+  </section>
+  <footer class="container pt-20 pb-16 flex lg:flex-col lg:text-center lg:items-center lg:py-12">
+    <div class="max-w-[462px] mr-11 flex-grow lg:mr-0 lg:mb-6">
+      <!-- h3 class="text-[38px] leading-[49px] font-semibold mb-8">License</h3>
+      <p class="mb-8 text-sm leading-[29px]">
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction(s), including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit person(s) to whom the Software is furnished to do so, subject to the following conditions:
+        <br>
+        <br>
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+      </p>
+      <p class="text-[11px]">
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+      </p>
+    </div -->
+    <div class="flex-grow" id="contact-us">
+      <div class="flex justify-between items-center mb-11 lg:flex-col lg:w-full">
+        <h3 class="text-[38px] leading-[49px] font-semibold">Contact us</h3>
+        <a class="text-[20px] underline" href="mailto:info@eadomo.com">info@eadomo.com</a>
+      </div>
+      <!-- form action="mailto:mailto:info@eadomo.com" method="post" enctype="text/plain">
+        <div class="flex mb-9 md:flex-col">
+          <div class="flex flex-col mr-4 max-w-[287px] w-full md:max-w-full">
+            <div class="field mb-8">
+              <label class="field-label" for="">Your name</label>
+              <input type="text" name="subject" placeholder="Your Name">
+            </div>
+            <div class="field md:mb-9">
+              <label class="field-label" for="">E-mail</label>
+              <input type="email" name="email" placeholder="Your E-mail">
+            </div>
+          </div>
+          <div class="field w-full">
+            <label class="field-label" for="">Message</label>
+            <textarea
+              class="h-full"
+              name="body"
+              id=""></textarea>
+          </div>
+        </div>
+
+        <button type="submit" value="Send" class="button shadow-shadow3 h-[61px] w-[264px] ml-auto mr-auto">Send form</button>
+      </form -->
+      <!-- div class="flex flex-col items-end lg:items-center lg:mt-12">
+        <h6 class="text-sm mb-4 uppercase">Follow up</h6>
+        <div class="flex items-center">
+          <a class="mr-9 last:mr-0" href="https://github.com/eadomo/eadomo">
+            <svg
+              class="text-primary hover:text-blue"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30.922"
+              height="25.933"><path
+                fill="currentColor"
+                d="m30.834 2.361-4.666 22.006c-.352 1.553-1.27 1.94-2.575 1.208l-7.109-5.239-3.431 3.3a1.786 1.786 0 0 1-1.429.7l.511-7.241L25.312 5.184c.573-.511-.124-.794-.89-.283L8.131 15.159l-7.013-2.2c-1.526-.476-1.553-1.526.318-2.257L28.867.139c1.27-.477 2.381.282 1.967 2.222Z"
+                data-name="brand telegram-plane" /></svg>
+
+          </a>
+          <a class="mr-9 last:mr-0" href="https://github.com/eadomo/eadomo">
+            <svg
+              class="text-primary hover:text-blue"
+              xmlns="http://www.w3.org/2000/svg"
+              width="21.645"
+              height="21.646"><path
+                fill="currentColor"
+                d="M4.547 13.678A2.274 2.274 0 1 1 2.274 11.4h2.273Zm1.146 0a2.274 2.274 0 1 1 4.547 0v5.693a2.274 2.274 0 1 1-4.547 0Zm2.274-9.131a2.274 2.274 0 1 1 2.274-2.274v2.274H7.967Zm0 1.146a2.274 2.274 0 0 1 0 4.547H2.274a2.274 2.274 0 0 1 0-4.547h5.693ZM17.1 7.967a2.274 2.274 0 1 1 2.274 2.274H17.1Zm-1.146 0a2.274 2.274 0 1 1-4.547 0V2.274a2.274 2.274 0 1 1 4.547 0ZM13.678 17.1a2.274 2.274 0 1 1-2.278 2.272V17.1Zm0-1.146a2.274 2.274 0 0 1 0-4.547h5.693a2.274 2.274 0 0 1 0 4.547Z"
+                data-name="brand slack" /></svg>
+          </a>
+          <a class="mr-9 last:mr-0" href="https://hub.docker.com/r/eadomo/eadomo">
+            <svg
+              class="text-primary hover:text-blue"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30.922"
+              height="21.649"><path
+                fill="currentColor"
+                d="M16.907 9.87h-3.193V7h3.193Zm0-9.87h-3.193v2.933h3.193Zm3.778 7h-3.193v2.87h3.193V7Zm-7.551-3.488h-3.19v2.9h3.19Zm3.773 0h-3.193v2.9h3.193ZM30.28 8.343a5.657 5.657 0 0 0-3.532-.406 4.67 4.67 0 0 0-1.986-3.077l-.676-.449-.449.676a4.9 4.9 0 0 0-.179 5.015 4.859 4.859 0 0 1-2.338.517h-21a10.143 10.143 0 0 0 2.124 7.831c1.792 2.121 4.479 3.2 7.991 3.2 7.6 0 13.233-3.5 15.866-9.865A4.452 4.452 0 0 0 30.512 9.6c.072-.121.319-.638.411-.826ZM5.587 7H2.399v2.87h3.193V7ZM9.36 7H6.167v2.87h3.194Zm3.773 0H9.944v2.87h3.19ZM9.361 3.512H6.167v2.9h3.194Z"
+                data-name="brand docker" /></svg>
+          </a>
+          <a class="mr-9 last:mr-0" href="https://github.com/eadomo/eadomo">
+            <svg
+              class="text-primary hover:text-blue"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24.738"
+              height="20.091"><path
+                fill="currentColor"
+                d="M22.195 5.007c.016.22.016.44.016.659A14.326 14.326 0 0 1 7.785 20.091 14.327 14.327 0 0 1 0 17.818a10.489 10.489 0 0 0 1.224.063 10.154 10.154 0 0 0 6.294-2.166 5.079 5.079 0 0 1-4.74-3.516 6.393 6.393 0 0 0 .958.078 5.362 5.362 0 0 0 1.334-.173A5.071 5.071 0 0 1 1 7.126v-.063a5.106 5.106 0 0 0 2.292.644A5.078 5.078 0 0 1 1.722.926 14.411 14.411 0 0 0 12.18 6.232a5.723 5.723 0 0 1-.126-1.162 5.075 5.075 0 0 1 8.774-3.469A9.982 9.982 0 0 0 24.046.377a5.056 5.056 0 0 1-2.229 2.794 10.164 10.164 0 0 0 2.92-.785 10.9 10.9 0 0 1-2.542 2.621Z"
+                data-name="brand twitter" /></svg>
+          </a>
+        </div>
+      </div -->
+    </div>
+  </footer>
+</main>
+    <script src="./scripts/glide.js"></script>
+    <script src="./scripts/alpine-breakpoints.js"></script>
+    <script src="./scripts/alpine.js"></script>
+    <script src="./scripts/scripts.js"></script>
+  </body>
+</html>
