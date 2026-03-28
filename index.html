@@ -4,23 +4,80 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Easy Docker Monitoring (EaDoMo) tool homepage.">
-    <meta property="og:title" content="Easy Docker Monitoring (EaDoMo)">
-    <meta property="og:description" content="EaDoMo is a lightweight monitoring tool for Docker containers, services, servers, and Java applications.">
+    <meta name="description" content="EaDoMo is a lightweight self-hosted Docker monitoring tool for containers, web services, servers, and Java applications with Slack and Telegram alerts.">
+    <meta property="og:title" content="EaDoMo: Lightweight Docker Monitoring for Containers and Services">
+    <meta property="og:description" content="Monitor Docker containers, web services, servers, and Java applications with a lightweight self-hosted monitoring tool.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.eadomo.com/">
     <meta property="og:image" content="https://www.eadomo.com/images/dashboard@2x.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Easy Docker Monitoring (EaDoMo)">
-    <meta name="twitter:description" content="EaDoMo is a lightweight monitoring tool for Docker containers, services, servers, and Java applications.">
+    <meta name="twitter:title" content="EaDoMo: Lightweight Docker Monitoring for Containers and Services">
+    <meta name="twitter:description" content="Monitor Docker containers, web services, servers, and Java applications with a lightweight self-hosted monitoring tool.">
     <meta name="twitter:image" content="https://www.eadomo.com/images/dashboard@2x.jpg">
 
-    <title>Easy Docker Monitoring</title>
+    <title>EaDoMo: Lightweight Docker Monitoring for Containers, Services, and Servers</title>
 
     <link rel="canonical" href="https://www.eadomo.com/">
 
     <link rel="stylesheet" href="./styles/glide.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "EaDoMo",
+        "applicationCategory": "MonitoringApplication",
+        "operatingSystem": "Linux, Docker",
+        "url": "https://www.eadomo.com/",
+        "downloadUrl": "https://hub.docker.com/r/eadomo/eadomo",
+        "image": "https://www.eadomo.com/images/dashboard@2x.jpg",
+        "description": "EaDoMo is a lightweight self-hosted Docker monitoring tool for containers, web services, servers, and Java applications with Slack and Telegram alerts.",
+        "sameAs": [
+          "https://github.com/eadomo/eadomo",
+          "https://hub.docker.com/r/eadomo/eadomo"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is EaDoMo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "EaDoMo is a lightweight self-hosted Docker monitoring tool for containers, web services, servers, and Java applications."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can EaDoMo monitor remote Docker hosts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. EaDoMo can monitor remote Docker hosts, for example by connecting through DOCKER_HOST over SSH."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does EaDoMo support alerts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. EaDoMo can send service outage alerts through Telegram and Slack."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What can EaDoMo monitor besides Docker containers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In addition to Docker containers, EaDoMo can monitor web services, servers, and Java applications through JMX."
+            }
+          }
+        ]
+      }
+    </script>
 
   </head>
   <body>
@@ -66,15 +123,15 @@
         alt="">
     </picture>
     <div class="container z-20 relative pt-[150px] lg:pt-24 lg:text-center lg:flex lg:flex-col lg:items-center">
-      <h1 class="font-bold text-[38px] mb-6 max-w-[246px] leading-[49px]">
-        Easy Docker Monitoring
+      <h1 class="font-bold text-[38px] mb-6 max-w-[420px] leading-[49px]">
+        Lightweight Docker monitoring for containers and services
       </h1>
       <p class="text-base leading-8 max-w-[523px] mb-14">
-        EaDoMo is a good choice if you don't want to spend days configuring enterprise-level monitoring frameworks like Prometheus, Zabbix or similar. It is designed for small non-production deployments and allows you to have an overview of the docker containers and services running within your ecosystem.
+        EaDoMo is a lightweight self-hosted Docker monitoring tool for teams that want visibility into containers, web services, servers, and Java applications without spending days configuring large monitoring stacks.
         <br><br>
-        EaDoMo is easy to install and easy to run. The only thing it requires to operate is a connection to your Docker socket. Apart from docker containers, EaDoMo can also monitor servers (also those which have a zabbix agent installed) and Java applications providing access to JMX.
+        It is designed for small and mid-sized deployments, easy to install, and easy to run. The only thing it requires to operate is a connection to your Docker socket. Apart from Docker containers, EaDoMo can also monitor servers, web services, and Java applications providing access to JMX.
         <br><br>
-        EaDoMo uses MongoDB to store data. It can inform you about service outages using Telegram and Slack channels.
+        EaDoMo uses MongoDB to store data and can inform you about service outages using Telegram and Slack channels.
       </p>
       <div class="flex items-center mb-40 lg:flex-col lg:mb-14">
         <a href="https://github.com/eadomo/eadomo" class="button w-[217px] mr-11 shadow-shadow3 lg:mr-0 lg:mb-4">Start now</a>
@@ -84,15 +141,13 @@
   </section>
   <section class="container flex items-start mb-28 md:flex-col md:text-center md:mb-14" id="about">
     <p class="text-base leading-8 mr-14 md:mr-0 md:mb-6">
-      EaDoMo is designed for small non-production deployments and allows you to
-      have an overview of the docker containers and services running within your ecosystem.
+      EaDoMo is built for lightweight Docker monitoring in smaller deployments and helps you keep track of the containers and services running inside your environment.
       <br/>
       <br/>
-      EaDoMo is easy to install and easy to run. The only thing it requires to
-      operate is a connection to your Docker socket. Apart from docker containers, EaDoMo can also monitor servers (also those which have a zabbix agent installed) and Java applications providing access to JMX.
+      If you need a self-hosted monitoring tool that is easier to start with than larger enterprise platforms, EaDoMo gives you quick setup, practical health checks, and a clear dashboard. Apart from Docker containers, it can also monitor servers, web services, and Java applications providing access to JMX.
       <br/>
       <br/>
-      EaDoMo uses MongoDB to store data. It can inform you about service outages using Telegram and Slack channels.
+      EaDoMo uses MongoDB to store data and can send outage notifications through Telegram and Slack.
     </p>
     <div class="shadow-shadow1 max-w-[388px] w-full bg-blue-light px-[18px] py-11 pb-12 flex-shrink-0 rounded-2xl relative md:mx-auto md:py-6">
       <h3 class="text-base leading-[49px] uppercase font-semibold text-center mb-8 overflow-x-hidden">
@@ -121,29 +176,35 @@
   </section>
   <section class="mb-24 container">
     <h2 class="text-[38px] font-semibold text-center mb-4">
-      Built-in monitoring
+      Built-in Docker monitoring overview
     </h2>
     <img
       class="ml-auto mr-auto"
       src="./images/built-in@1x.png"
       srcset="./images/built-in@1x.png 1x, ./images/built-in@2x.png 2x"
-      alt="Built-in monitoring" />
+      alt="EaDoMo built-in Docker monitoring overview" />
+    <p class="text-[15px] leading-7 text-center max-w-[760px] ml-auto mr-auto mt-6">
+      The built-in monitoring view helps you inspect container health, restarts, open ports, image updates, and runtime statistics from one lightweight Docker monitoring dashboard.
+    </p>
   </section>
   <section class="mb-20 container">
     <h2 class="text-[38px] font-semibold text-center mb-4">
-      Convenient dashboard
+      Docker monitoring dashboard
     </h2>
     <img
       class="ml-auto mr-auto"
       src="./images/dashboard@1x.jpg"
       srcset="./images/dashboard@1x.jpg 1x, ./images/dashboard@2x.jpg 2x"
-      alt="Convenient dashboard" />
+      alt="EaDoMo Docker monitoring dashboard" />
+    <p class="text-[15px] leading-7 text-center max-w-[760px] ml-auto mr-auto mt-6">
+      EaDoMo provides a self-hosted Docker monitoring dashboard for container status, service visibility, and operational checks without the overhead of a full enterprise monitoring stack.
+    </p>
   </section>
   <section class="container mb-28 lg:mb-14" id="running">
-    <h2 class="text-[38px] font-semibold text-center mb-4">Running</h2>
+    <h2 class="text-[38px] font-semibold text-center mb-4">How to run EaDoMo for Docker monitoring</h2>
     <p class="text-base leading-8 text-center mb-12">
-      The recommended way to run EaDoMo is using docker - directly or via
-      docker-compose.
+      The recommended way to run EaDoMo is with Docker, either directly or through
+      docker-compose, so you can start monitoring containers quickly.
     </p>
     <div
       class="flex items-start mb-28 lg:flex-col mt-16 lg:mt-4 lg:mb-12"
@@ -283,7 +344,7 @@
       src="./images/feature-bg.svg"
       alt="">
     <div class="container z-20 relative">
-      <h2 class="font-semibold text-[38px] text-center mb-14">Features</h2>
+      <h2 class="font-semibold text-[38px] text-center mb-14">Docker monitoring features</h2>
       <div class="flex mb-20 md:flex-col md:mb-5">
         <div class="mr-4 flex-grow basis-72">
           <div class="text-center">
@@ -300,9 +361,9 @@
               </defs>
               <g clip-path="url(#a)" data-name="Сгруппировать 295"><path fill="#3d7ab7" d="M-62.836-28.55h1610.437v191.262H-62.836Z" /></g>
             </svg>
-            <h4 class="text-xl mb-7 uppercase text-primary font-bold">Docker containers</h4>
+	            <h3 class="text-xl mb-7 uppercase text-primary font-bold">Docker containers</h3>
           </div>
-          <p class="text-[15px] leading-7 font-semibold">EaDoMo verifies the following parameters of docker containers:</p>
+	          <p class="text-[15px] leading-7 font-semibold">EaDoMo verifies the following Docker container monitoring signals:</p>
           <ul role="list" class="marker:text-black list-disc text-[15px] leading-7 ml-3 pl-4 mb-7">
             <li>if the container running</li>
             <li>if the container has been restarted recently (planned/unplanned)</li>
@@ -331,7 +392,7 @@
                   fill="#3d7ab7"
                   d="M21.714 9.808C20.778 4.046 18.571 0 16 0s-4.775 4.046-5.711 9.808ZM9.808 16a40.446 40.446 0 0 0 .213 4.13h11.958a40.446 40.446 0 0 0 .213-4.13 40.447 40.447 0 0 0-.213-4.13H10.021A40.446 40.446 0 0 0 9.808 16Zm20.953-6.195a16.037 16.037 0 0 0-10.2-9.137 21.779 21.779 0 0 1 3.226 9.137ZM11.435.671a16.026 16.026 0 0 0-10.19 9.137h6.97a21.691 21.691 0 0 1 3.22-9.137Zm20.017 11.2h-7.4c.136 1.355.213 2.742.213 4.13s-.077 2.775-.213 4.13h7.4A15.865 15.865 0 0 0 32 16a16.142 16.142 0 0 0-.548-4.13ZM7.743 16c0-1.387.077-2.775.213-4.13H.555a15.644 15.644 0 0 0 0 8.26h7.4A41.995 41.995 0 0 1 7.743 16Zm2.549 6.2c.936 5.762 3.143 9.808 5.711 9.808s4.775-4.046 5.711-9.808Zm10.279 9.137a16.052 16.052 0 0 0 10.2-9.137H23.8a21.779 21.779 0 0 1-3.228 9.135ZM1.245 22.2a16.037 16.037 0 0 0 10.2 9.137 21.779 21.779 0 0 1-3.23-9.137h-6.97Z"
                   data-name="solid globe" /></svg>
-              <h4 class="text-xl mb-7 uppercase text-primary font-bold">Web services</h4>
+	              <h3 class="text-xl mb-7 uppercase text-primary font-bold">Web services</h3>
             </div>
             <p class="text-[15px] leading-7 font-semibold">EaDoMo verifies:</p>
             <ul role="list" class="marker:text-black list-disc text-[15px] leading-7 ml-3 pl-4 mb-7">
@@ -349,7 +410,7 @@
                   fill="#3d7ab7"
                   d="M29.714 1.143A1.143 1.143 0 0 0 28.571 0H24a1.143 1.143 0 0 0-1.143 1.143v3.429h6.857Zm-25.149 8C4.386 15.846.247 17.3 0 26.571v3.143A2.286 2.286 0 0 0 2.286 32h6.857a2.286 2.286 0 0 0 2.286-2.286V18.286h2.286V6.857H6.846a2.308 2.308 0 0 0-2.281 2.285Zm27.441 0a2.308 2.308 0 0 0-2.281-2.285h-6.868v11.428h2.286v11.428A2.286 2.286 0 0 0 27.429 32h6.857a2.286 2.286 0 0 0 2.286-2.286v-3.143c-.248-9.271-4.386-10.725-4.566-17.429ZM12.571 0H8a1.143 1.143 0 0 0-1.143 1.143v3.429h6.857V1.143A1.143 1.143 0 0 0 12.571 0ZM16 18.286h4.571V6.857H16Z"
                   data-name="solid binoculars" /></svg>
-              <h4 class="text-xl mb-7 uppercase text-primary font-bold">JMX services</h4>
+	              <h3 class="text-xl mb-7 uppercase text-primary font-bold">JMX services</h3>
             </div>
             <p class="text-[15px] leading-7 font-semibold">EaDoMo gathers statistics on:</p>
             <ul role="list" class="marker:text-black list-disc text-[15px] leading-7 ml-3 pl-4 mb-7">
@@ -362,10 +423,39 @@
           </div>
         </div>
       </div>
-      <h2 class="font-semibold text-[38px] text-center mb-14 md:mb-6">How it works</h2>
-      <p class="font-[15px] leading-8 text-center max-w-[1085px] ml-auto mr-auto">
-        Docker engine provides itself a lot of monitoring and statistics gathering capabilities, which EaDoMo is making use of. Monitoring of services is done either by simple checking open port availability or, in case Zabbix agent is available, by fetching node information from it. For JMX applications EaDoMo launches a proxy container within the target container namespace which fetches information and provides it to EaDoMo via Docker connection - there is no additional communication channels opened between the monitored host and the host where EaDoMo is running.
-      </p>
+	      <h2 class="font-semibold text-[38px] text-center mb-14 md:mb-6">How EaDoMo Docker monitoring works</h2>
+	      <p class="font-[15px] leading-8 text-center max-w-[1085px] ml-auto mr-auto">
+	        Docker itself exposes a lot of useful runtime data, and EaDoMo turns those capabilities into a practical self-hosted Docker monitoring workflow. Monitoring of services is done either by checking open port availability or, in case Zabbix agent is available, by fetching node information from it. For JMX applications EaDoMo launches a proxy container within the target container namespace which fetches information and provides it to EaDoMo via Docker connection, so there are no additional communication channels opened between the monitored host and the host where EaDoMo is running.
+	      </p>
+    </div>
+  </section>
+  <section class="container mb-28 lg:mb-14">
+    <h2 class="text-[38px] font-semibold text-center mb-10">Docker monitoring FAQ</h2>
+    <div class="max-w-[900px] ml-auto mr-auto">
+      <div class="mb-8">
+        <h3 class="text-xl font-bold mb-3">What is EaDoMo?</h3>
+        <p class="text-[15px] leading-8">
+          EaDoMo is a lightweight self-hosted Docker monitoring tool for containers, web services, servers, and Java applications.
+        </p>
+      </div>
+      <div class="mb-8">
+        <h3 class="text-xl font-bold mb-3">Can EaDoMo monitor remote Docker hosts?</h3>
+        <p class="text-[15px] leading-8">
+          Yes. EaDoMo can monitor remote Docker hosts, including setups that connect through DOCKER_HOST over SSH.
+        </p>
+      </div>
+      <div class="mb-8">
+        <h3 class="text-xl font-bold mb-3">Does EaDoMo support alerts?</h3>
+        <p class="text-[15px] leading-8">
+          Yes. EaDoMo can notify you about service outages through Telegram and Slack channels.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-3">What can EaDoMo monitor besides Docker containers?</h3>
+        <p class="text-[15px] leading-8">
+          Besides Docker containers, EaDoMo can monitor web services, servers, and Java applications exposed through JMX.
+        </p>
+      </div>
     </div>
   </section>
   <footer class="container pt-20 pb-16 flex lg:flex-col lg:text-center lg:items-center lg:py-12">
